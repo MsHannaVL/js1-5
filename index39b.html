@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+  </head>
+  <body>
+    <script>
+		let a = prompt("Введите a:");
+      	while (isNaN(a) || a.length > 50) {
+        	alert("Введите цифры");
+        	a = prompt("Введите a:");
+      	}
+      	let b = prompt("Введите b:");
+      	while (isNaN(b) || b.length > 50) {
+        	alert("Введите цифры");
+        	b = prompt("Введите b:");
+      	}
+	  	let c = prompt("Введите c:");
+      	while (isNaN(c) || c.length > 50) {
+        	alert("Введите цифры");
+        	c = prompt("Введите c:");
+      	}
+		let calcD = (a, b, c) => 
+			{return b * b - 4 * a * c;};
+		let discriminant = calcD(a, b, c);
+		let D = 'D=' + discriminant;
+				if (discriminant < 0)
+					D = D + '\n  Если D меньше нуля, то уравнение не имеет действительных решений.';
+				if (discriminant == Infinity || isNaN(discriminant))
+					D = "Слишком большое число";
+		alert(D);
+		</script>
+  </body>
+</html>
